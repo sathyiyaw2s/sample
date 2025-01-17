@@ -20,6 +20,10 @@ jobs:
 
     - name: Build the Docker image
       run: docker build -t sample:latest .
+
+    - name: Verify the image exists
+      run: docker images
+      
     - name: Push to Dockerhub
       run: docker push vsathiya230/sample:latest
     
