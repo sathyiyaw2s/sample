@@ -14,10 +14,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Pull the docker image from Dockerhub
-        run: sudo docker pull vsathiya230/sample:latest
+    - name: pull the docker image from Dockerhub
+      run: sudo docker pull vsathiya230/sample:latest
     - name: Delete old docker container
-        run: sudo docker rm -f sample || true
+      run: sudo docker rm -f sample || true
     - name: Run the Docker container
-        run: sudo docker run -d -p 8080:8080 --name sample vsathiya230/sample:latest
-        
+      run: sudo docker run -d -p 8080:8080 --name sample vsathiya230/sample:latest
